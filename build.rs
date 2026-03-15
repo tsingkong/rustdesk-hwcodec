@@ -154,7 +154,7 @@ mod ffmpeg {
             )
         );
         {
-            let mut static_libs = vec!["avcodec", "avutil", "avformat"];
+            let mut static_libs = vec!["avcodec", "avutil", "avformat", "glslang", "SPIRV-Tools", "SPIRV-Tools-opt"];
             // Intel Quick Sync (libmfx/QSV) is x86/x64-only; FFmpeg is built without
             // --enable-libmfx on arm64 (see res/vcpkg/ffmpeg/portfile.cmake), so don't link it there.
             if target_os == "windows" && (target_arch == "x64" || target_arch == "x86") {
