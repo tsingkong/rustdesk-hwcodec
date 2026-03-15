@@ -154,7 +154,7 @@ mod ffmpeg {
             )
         );
         {
-            let mut static_libs = vec!["avcodec", "avutil", "avformat"];
+            let mut static_libs = vec!["avcodec", "avutil", "avformat", "glslang", "SPIRV-Tools", "SPIRV-Tools-opt"];
             if target_os == "windows" {
                 static_libs.push("libmfx");
             }
